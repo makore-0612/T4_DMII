@@ -69,7 +69,7 @@ con 20 modelos, está en `06_comparacion.ipynb`.
    |---|---|---|---|---|
    | `01` | `data/*.txt`, `movie_titles.csv` | `ratings.parquet`, `train_*.npy`, `probe_*.npy`, `R_train.npz`, `S_*` | 8 min (2 min si ya existe el Parquet) | 3.1 GB |
    | `02` | `R_train.npz`, `S_R_train.npz`, probe | `modelos/baseline_*.npz`, `modelos/knn_*`, `resultados/`, `predicciones/` | 15 min | 1.5 GB |
-   | `03` | lo anterior | `modelos/svd_*`, `modelos/nmf_S.npz`, `modelos/puresvd_V_S.npy` | 80–90 min (SGD con 99 M: ~30 min) | 2.2 GB |
+   | `03` | lo anterior | `modelos/svd_*`, `modelos/nmf_S.npz`, `modelos/puresvd_V_S.npy` | 70 min (SGD con 99 M: ~27 min) | 2.2 GB |
    | `04` | `S_R_train.npz`, `S_dias.npy` | `modelos/reglas_*.npz` | 10 min | 1.3 GB |
    | `05` | S, `modelos/svd_sgd_S.npz` | `modelos/grafo_peliculas_S.npz`, `modelos/pagerank_S.npz`, `modelos/contenido_S.npz` | 10 min | 1.6 GB |
    | `06` | `resultados/`, `predicciones/`, `modelos/` | `resultados/Ensamble ridge (S).json` | 2 min | < 1 GB |
