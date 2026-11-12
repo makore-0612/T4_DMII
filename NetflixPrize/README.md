@@ -6,7 +6,7 @@
 
 ---
 
-Este repositorio construye y compara sistemas de recomendación sobre los ~100 millones de ratings del
+Esta carpeta construye y compara sistemas de recomendación sobre los ~100 millones de ratings del
 [Netflix Prize (Kaggle)](https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data): 480,189 usuarios,
 17,770 películas, ratings de 1 a 5 entre 1999 y 2005. Usa los métodos del curso: filtrado colaborativo, SVD, NMF,
 PCA, t-SNE, A-Priori, PCY, Multistage, Multihash, SON, Toivonen, FP-Growth, PrefixSpan, PageRank por el método de
@@ -22,7 +22,7 @@ potencias, grafos y recomendación basada en contenido. Todos se evalúan con el
 | `06_comparacion.ipynb` | Tabla final, ensamble y ejemplos | ensamble ridge | S |
 
 ```text
-T4_DMII/
+NetflixPrize/
 ├── notebooks/
 │   ├── 01_carga_eda.ipynb              # Parquet por bloques, CSR, EDA, probe, submuestra S
 │   ├── 02_baseline_vecindarios.ipynb   # validación tipo probe, baseline, kNN ítem-ítem (RMSE y top-N)
@@ -54,13 +54,13 @@ con 20 modelos, está en `06_comparacion.ipynb`.
 
 ## Cómo replicarlo
 
-1. **Datos.** Con la [API de Kaggle](https://www.kaggle.com/docs/api) autenticada, desde la raíz del repositorio:
+1. **Datos.** Con la [API de Kaggle](https://www.kaggle.com/docs/api) autenticada, desde la carpeta `NetflixPrize/`:
 
    ```bash
    kaggle datasets download -d netflix-inc/netflix-prize-data -p data/ --unzip
    ```
 
-   Quedan en `data/` los cuatro `combined_data_*.txt`, `probe.txt`, `qualifying.txt` y `movie_titles.csv` (~2.1 GB).
+   Quedan en `NetflixPrize/data/` los cuatro `combined_data_*.txt`, `probe.txt`, `qualifying.txt` y `movie_titles.csv` (~2.1 GB).
 2. **Dependencias.** `pip install -r requirements.txt`. Los notebooks se ejecutaron con Python 3.14.7 en Windows, con
    12 GB de RAM (~4 GB libres en la práctica).
 3. **Orden de ejecución**, desde `notebooks/` (cada uno usa las salidas de los anteriores en `data/processed/`):
